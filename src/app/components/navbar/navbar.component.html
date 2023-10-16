@@ -1,0 +1,54 @@
+<header>
+  <div class="wrapper">
+    <div class="personal-info">
+      <div class="personal-info__photo">
+        <img src="../../../assets/personal_photo.PNG" alt="profile photo">
+      </div>
+      <div class="personal-info__content">
+        <div class="personal-info__text">
+          <span class="personal-info__text--title"> 
+            Olá, eu sou o<br> 
+            <strong class="personal-info__text--fade">Vítor Cogo!</strong> 
+          </span>
+          <span class="personal-info__text--subtitle">Desenvolvedor Front End</span>
+        </div>
+        <div class="personal-info__buttons">
+          <a 
+            class="fade-button" 
+            href="../../../assets/resume.pdf"
+            target="_blank">
+            Baixar CV
+          </a>
+          <a 
+            class="fade-button" 
+            [href]="socialLinks.Whatsapp"
+            target="_blank">
+            Entrar em Contato
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <ul class="sessions">
+        <li *ngFor="let session of homeSessions" class="sessions__item">
+          <a 
+            [href]="session.href" 
+            class="sessions__link" 
+            [ngClass]="{'sessions__link--active' : session.isActive}"
+            (click)="setCurrentSession(session.id)">
+            <span class="sessions__link__border"></span>
+            <span class="sessions__link__title">{{ session.title }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrapper">
+    <div class="social-links">
+      <a class="social-links__item github" [href]="socialLinks.Github" target="_blank"></a>
+      <a class="social-links__item linkedin" [href]="socialLinks.Linkedin" target="_blank"></a>
+      <a class="social-links__item whatsapp" [href]="socialLinks.Whatsapp" target="_blank"></a>
+      <a class="social-links__item instagram" [href]="socialLinks.Instagram" target="_blank"></a>
+    </div>
+  </div>
+</header>

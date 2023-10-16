@@ -1,0 +1,19 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--text-main);
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+
+  a {
+    font-weight: bold;
+    color: var(--text-lightness);
+    cursor: pointer;
+    transition: .2s;
+    
+    &:hover {
+      color: var(--main-yellow);
+    }
+  }
+}

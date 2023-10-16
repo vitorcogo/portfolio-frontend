@@ -1,0 +1,21 @@
+<section class="skills">
+  <span class="skills__help">Clique na tecnologia para ver mais detalhes*</span>
+  <div class="skills__cards">
+    <div class="skills__cards__container">
+      <button 
+        class="skills__cards__item" 
+        *ngFor="let skill of skills"
+        [ngClass]="{ 'skills__cards__item--active' : skill === selectedSkill }" 
+        (click)="selectSkill(skill)">
+        <img [src]="skill.imgUrl">
+      </button>
+    </div>
+    <span class="skills__show-more" (click)="changeShowAllSkills()">
+      {{ showAllSkills ? 'Mostrar menos' : 'Mostrar mais'  }}
+    </span>
+  </div>
+  <div class="skills__details" *ngIf="selectedSkill">
+    <span class="skills__details__title">{{selectedSkill.title}}</span>
+    <p class="skills__details__description">{{selectedSkill.description}}</p>
+  </div>
+</section>

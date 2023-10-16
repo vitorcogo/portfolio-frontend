@@ -1,0 +1,74 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .project {
+    display: flex;
+    gap: 1.3rem;
+    background-color: var(--darkness-background);
+    border-radius: .6rem;
+
+    img {
+      min-height: 15rem;
+      width: 20rem;
+      object-fit: cover;
+      filter: brightness(0.45);
+      border-radius: .6rem 0 0 .6rem;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem;
+      padding-left: 0;
+
+      &__details {
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+
+        &__title {
+          font-size: 1.6rem;
+          font-weight: bold;
+          color: var(--text-lightness);
+        }
+
+        &__description {
+          font-size: 1.2rem;
+          line-height: 2.2rem;
+          color: var(--text-main);
+        }
+      }
+
+      &__links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1.4rem;
+
+        a {
+          width: 2.5rem;
+          aspect-ratio: 1/1;
+          mask-size: contain;
+          mask-repeat: no-repeat;
+          background-color: var(--text-darkness);
+          transition: .2s;
+          
+          &:hover {
+            background-color: var(--text-lightness);
+          }
+        }
+
+        &__repository {
+          mask-image: url('../../../assets/icons/github_icon.svg');
+        }
+
+        &__deploy {
+          mask-image: url('../../../assets/icons/web_icon.svg');
+        }
+      }
+    }
+  }
+}

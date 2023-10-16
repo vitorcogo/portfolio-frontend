@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+
 :root {
   --main-green: #90FF20;
   --main-yellow: #D2FF20;
@@ -6,7 +6,49 @@
   --main-background: #2D2D2D;
   --darkness-background: #1C1C1C;
 
-  --main-font: #B4B4B4;
-  --darkness-font: #8D8D8D;
-  --lightness-font: #F5F5F5;
+  --text-main: #B4B4B4;
+  --text-darkness: #8D8D8D;
+  --text-lightness: #F5F5F5;
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('./assets/inter.ttf');
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--main-background);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'inter';
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-moz-selection {
+  color: var(--main-background);
+  background: var(--secondary-yellow);
+}
+
+::selection {
+  color: var(--main-background);
+  background: var(--main-yellow);
 }

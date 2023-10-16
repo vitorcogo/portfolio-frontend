@@ -1,0 +1,24 @@
+<section class="projects">
+  <div class="project" *ngFor="let project of projects">
+    <img [src]="project.imgUrl">
+    <div class="project__content">
+      <div class="project__content__details">
+        <span class="project__content__details__title">{{ project.title }}</span>
+        <p class="project__content__details__description">{{ project.description }}</p>
+      </div>
+      <div class="project__content__links">
+        <a 
+          class="project__content__links__repository" 
+          [href]="project.repositoryUrl"
+          target="_blank">
+        </a>
+        <a 
+          class="project__content__links__deploy" 
+          *ngIf="project.deployUrl" 
+          [href]="project.deployUrl"
+          target="_blank">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

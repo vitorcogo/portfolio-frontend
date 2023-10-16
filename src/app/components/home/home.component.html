@@ -1,0 +1,17 @@
+<section>
+  <div class="container">
+    <div class="content content--static">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="content">
+      <div class="wrapper" *ngFor="let session of sessions" [id]="session.id">
+        <ng-container [ngSwitch]="session.id">
+          <app-about *ngSwitchCase="sessionsEnum.ABOUT"></app-about>
+          <app-skills *ngSwitchCase="sessionsEnum.SKILLS"></app-skills>
+          <app-experiences *ngSwitchCase="sessionsEnum.EXPERIENCE"></app-experiences>
+          <app-projects *ngSwitchCase="sessionsEnum.PROJECTS"></app-projects>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</section>

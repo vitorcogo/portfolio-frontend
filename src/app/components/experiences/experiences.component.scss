@@ -1,0 +1,89 @@
+.experiences {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+
+  .experience {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+
+    &__time {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-darkness);
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      
+      &--company {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--text-lightness);
+        text-decoration: none;
+
+        border-bottom: 1px solid transparent;
+        transition: .1s;
+
+        img {
+          width: 2rem;
+        }
+
+        &:hover {
+          border-bottom: 1px solid var(--text-lightness);
+        }
+      }
+
+      &--position {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--text-darkness);
+      }
+    }
+
+    &__description {
+      margin-top: .8rem;
+      font-size: 1.4rem;
+      color: var(--text-main);
+      line-height: 2.2rem;
+    }
+
+    &__skills {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: .8rem;
+      margin-top: .8rem;
+
+      &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: .7rem 1.6rem;
+        background-color: var(--darkness-background);
+        border-radius: .6rem;
+
+        &--fade-text {
+          font-size: 1.3rem;
+          font-weight: 600;
+          background: linear-gradient(to right, var(--main-green), var(--main-yellow));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}
