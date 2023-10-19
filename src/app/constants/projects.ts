@@ -6,7 +6,8 @@ export const Projects: Project[] = [
     description: 'Portfólio com foco na minha experiência como desenvolvedor Front-End. Desenvolvido com Angular 16.',
     imgUrl: './../../assets/protfolio_frontend.jpg',
     technologies: ['Angular 16', 'SCSS', 'Git', 'Typescript', 'RxJs'],
-    repositoryUrl: 'https://github.com/vitorcogo/portfolio-frontend'
+    repositoryUrl: 'https://github.com/vitorcogo/portfolio-frontend',
+    deployUrl: 'https://portfolio-frontend-theta-bay.vercel.app/'
   },
   {
     title: 'Vittorio Veneto',
