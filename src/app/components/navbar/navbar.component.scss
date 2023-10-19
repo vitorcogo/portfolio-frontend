@@ -200,3 +200,34 @@ nav {
     }
   }
 }
+
+@media screen and (max-width: 1040px) {
+  header {
+    height: auto;
+    gap: 4rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .social-links {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .personal-info__photo {
+    display: none;
+  }
+
+  .personal-info__buttons {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .personal-info__buttons {
+    flex-direction: column;
+  }
+}

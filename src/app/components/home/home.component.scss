@@ -23,19 +23,36 @@ section {
   padding: 9rem 0;
   gap: 10rem;
 
-  &--static {
+  &--sticky {
     position: sticky;
     top: 0;
     max-height: 100vh;
   }
+
+  &__title {
+    display: none;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 1.6rem;
+    color: var(--text-lightness);
+  }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1040px) {
   .container {
     flex-direction: column;
   }
 
   .content {
-    min-height: none;
+    min-height: 0;
+
+    &--sticky {
+      position: static;
+      padding-bottom: 0;
+    }
+
+    &__title {
+      display: block;
+    }
   }
 }

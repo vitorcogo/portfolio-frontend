@@ -35,7 +35,7 @@
             [href]="session.href" 
             class="sessions__link" 
             [ngClass]="{'sessions__link--active' : session.isActive}"
-            (click)="setCurrentSession(session.id)">
+            (click)="setCurrentSession(session.id, true)">
             <span class="sessions__link__border"></span>
             <span class="sessions__link__title">{{ session.title }}</span>
           </a>

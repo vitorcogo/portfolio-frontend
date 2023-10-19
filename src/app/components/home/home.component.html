@@ -1,10 +1,11 @@
 <section>
   <div class="container">
-    <div class="content content--static">
-      <app-navbar></app-navbar>
+    <div class="content content--sticky">
+      <app-navbar [detectedSessions]="detectedSessionsEmitter.asObservable()"></app-navbar>
     </div>
     <div class="content">
-      <div class="wrapper" *ngFor="let session of sessions" [id]="session.id">
+      <div class="wrapper" *ngFor="let session of sessions" [id]="session.id" #session>
+        <h3 class="content__title">{{ session.title }}</h3>
         <ng-container [ngSwitch]="session.id">
           <app-about *ngSwitchCase="sessionsEnum.ABOUT"></app-about>
           <app-skills *ngSwitchCase="sessionsEnum.SKILLS"></app-skills>

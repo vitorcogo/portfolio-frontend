@@ -1,24 +1,48 @@
 <section class="projects">
-  <div class="project" *ngFor="let project of projects">
-    <img [src]="project.imgUrl">
+  <div class="project" *ngFor="let project of projects; let index = index">
+    <img [src]="project.imgUrl" (click)="openProject(project)">
     <div class="project__content">
-      <div class="project__content__details">
-        <span class="project__content__details__title">{{ project.title }}</span>
-        <p class="project__content__details__description">{{ project.description }}</p>
-      </div>
-      <div class="project__content__links">
-        <a 
-          class="project__content__links__repository" 
-          [href]="project.repositoryUrl"
-          target="_blank">
-        </a>
-        <a 
-          class="project__content__links__deploy" 
-          *ngIf="project.deployUrl" 
-          [href]="project.deployUrl"
-          target="_blank">
-        </a>
+      <ng-container *ngIf="showTechnologies && index === showTechnologiesProjectId; else details">
+        <div class="project__content__technologies">
+          <div 
+            class="project__content__technologies__item" 
+            *ngFor="let technology of project.technologies">
+            <span class="project__content__technologies__item--fade-text">
+              {{ technology }}
+            </span>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #details>
+        <div class="project__content__details">
+          <a class="project__content__details__title" (click)="openProject(project)">
+            {{ project.title }}
+          </a>
+          <p class="project__content__details__description">{{ project.description }}</p>
+        </div>
+      </ng-template>
+      <div class="project__content__buttons">
+        <span class="project__content__buttons__show-technologies" (click)="changeShowTechnologies(index)">
+          {{ showTechnologies && index === showTechnologiesProjectId ? 'Mostrar detalhes' : 'Mostrar tecnologias'  }}
+        </span>
+        <div class="project__content__links">
+          <a 
+            class="project__content__links__repository" 
+            [href]="project.repositoryUrl"
+            target="_blank">
+          </a>
+          <a 
+            class="project__content__links__deploy" 
+            *ngIf="project.deployUrl" 
+            [href]="project.deployUrl"
+            target="_blank">
+          </a>
+        </div>
       </div>
     </div>
+  </div>
+  <div class="projects__alert-message">
+    <span>Aguarde, estou trabalhando em mais projetos que estarão disponíveis em breve!</span>
+    <img src="./../../../assets/icons/tractor_icon.svg">
   </div>
 </section>

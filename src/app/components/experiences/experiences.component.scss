@@ -87,3 +87,13 @@
     }
   }
 }
+
+@media screen and (max-width: 470px) {
+  .experiences {
+    .experience__title {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+}

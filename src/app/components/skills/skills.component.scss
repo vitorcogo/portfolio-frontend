@@ -76,3 +76,27 @@
     }
   }
 }
+
+@media screen and (max-width: 1040px) {
+  .skills__cards__container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .skills__cards__item {
+    width: calc((100% - 4.5rem) / 4);
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .skills__cards__item {
+    width: calc((100% - 3rem) / 3);
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .skills__cards__item > img {
+    height: 3rem;
+  }
+}
