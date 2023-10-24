@@ -5,7 +5,7 @@ export const Projects: Project[] = [
     title: 'Portfólio',
     description: 'Portfólio com foco na minha experiência como desenvolvedor Front-End. Desenvolvido com Angular 16.',
     imgUrl: './../../assets/protfolio_frontend.jpg',
-    technologies: ['Angular 16', 'SCSS', 'Git', 'Typescript', 'RxJs'],
+    technologies: ['Angular 16', 'SCSS', 'Git', 'Typescript', 'RxJs', 'Figma'],
     repositoryUrl: 'https://github.com/vitorcogo/portfolio-frontend',
     deployUrl: 'https://vitorcogo.com/'
   },
