@@ -3,11 +3,22 @@ import { Experience } from "../models/experience.interface";
 
 export const Experiences: Experience[] = [
   {
-    companyName: 'ViaHub',
+    companyName: 'GFT Technologies',
+    companyUrl: ExperienceLinks.GFT,
+    startDate: 'MAI 2024',
+    endDate: 'ATUALMENTE',
+    position: 'Desenvolvedor Front-End',
+    description: 'Desenvolvimento de melhorias, componentes e novas interfaces para o sistema. Atuando em projetos que utilizam arquitetura micro front-ends.',
+    skills: [
+      'Angular', 'Typescript', 'Micro Frontend', 'GitFlow', 'RxJs', 'Jasmine', 'AngularJS', 'Jenkins'
+    ]
+  },
+  {
+    companyName: 'Casas Bahia Tecnologia',
     companyUrl: ExperienceLinks.VIAHUB,
     startDate: 'AGO 2022',
-    endDate: 'ATUALMENTE',
-    position: 'Front-End Software Engineer',
+    endDate: 'MAI 2024',
+    position: 'Desenvolvedor Front-End',
     description: 'Seteor de tecnologia do Grupo Casas Bahia. Desenvolvimento de melhorias, componentes e novas interfaces para o sistema. Atuando em projetos utilizando micro front-ends, e também no desenvolvimento de bibliotecas.',
     skills: [
       'Angular', 'TypeScript', 'RxJS' , 'GitFlow', 'Jest', 'Micro Frontend'
